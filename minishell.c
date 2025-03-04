@@ -1,6 +1,19 @@
 #include <stdio.h>
+#include <unistd.h>
+
+void	ft_putstr(char *str)
+{
+    int i;
+
+    while(str[i] != '\0')
+    {
+        write(1, &str[i], 1);
+        i++;
+    }
+}
 
 int main()
 {
-	return(printf("Hola Mundo!"));
+	ft_putstr("Hola Mundo!");
+	return(0);
 }
