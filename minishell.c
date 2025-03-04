@@ -17,3 +17,12 @@ int main()
 	ft_putstr("Hola Mundo!");
 	return(0);
 }
+
+int ft_putstr(char *str)
+{
+    int i = 0;
+
+    while (str[i])
+        write(1, &str[i++], 1);
+    return i;
+}
